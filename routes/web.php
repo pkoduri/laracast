@@ -12,15 +12,8 @@
 */
 
 Route::get('/', function () {
-    
-    $user = App\User::first();
-
-    $post = $user->posts()->create(['title'=>'foobar','description'=>'Lorem Ipsum']);
-    $post->tags()->attach(2);
 
 
-
-    echo $post;
 
     return view('index');
 });
